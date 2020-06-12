@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="./CSS/login.css">
+    <link rel="stylesheet" href="./CSS/global.css">
+</head>
+<body>
+    <div class="head">
+        <img class="logo" src="./images/logo.png" alt="">
+    </div>
+    <div class="body">
+        <form action="" class="form">
+            <img class="userimg" src="./images/用户名.png" alt="">
+            <input type="text" class="username" placeholder="用户名" >
+            <p class="bottomline">_______________________________________</p>
+            <div class="space1"></div>
+            <img class="userimg" src="./images/密码.png" alt="">
+            <input type="text" class="password" placeholder="密码" >
+            <p class="bottomline">_______________________________________</p>
+            <div class="space2"></div>
+            <a href="./index.html" class="land_button">登陆</a>
+        </form>
+        <div class="foot">
+            <a class="forget_pw" href="" >忘记密码?</a>
+            <a class="register" href="./register.html" >注册</a>
+        </div> 
+    </div>
+
+    <script>
+        let loginBtn = document.querySelector('.land_button');
+        let forgetPAsswordBtn = document.querySelector('.forget_pw');
+        let registerBtn = document.querySelector('.register');
+
+        loginBtn.onclick = function (e) {
+            let username = document.querySelector('.username').value;
+            let password = document.querySelector('.password').value;
+            e.preventDefault();
+            console.log(username)
+            console.log(password)
+
+            location.href = './index.html';
+        }
+
+        forgetPAsswordBtn.onclick = function (e) {
+            e.preventDefault();
+            location.href = './edit-password.html';
+        }
+
+        registerBtn.onclick = function (e) {
+            e.preventDefault();
+            location.href = './register.html';
+        }
+    </script>
+</body>
+</html>

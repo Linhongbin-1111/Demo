@@ -1,0 +1,170 @@
+body {
+    background: rgb(246, 246, 246);
+    box-sizing: border-box;
+}
+.header {
+    width: 100%; height: 60px;
+    font-size: 25px;
+    font-family: '黑体', Arial, Helvetica, sans-serif;
+    color: rgb(192, 149, 96);
+    text-align: center;
+    line-height: 60px;
+    letter-spacing: 1px;
+    position: relative;
+    background: white;
+}
+.back {
+    position: absolute;
+    width: 12px; height: 26px;
+    background: url('../images/back.png') no-repeat 0 0;
+    top: 15px;
+    left: 25px;
+}
+.evaluate {
+    width: 100%;
+    height: 70px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.evaluate > div {
+    margin-right: 30px;
+}
+.evaluate > div.active {
+    font-weight: bold;
+    color: rgb(192, 149, 96);
+}
+.order-list {
+    width: 96%;
+    margin: 0 auto;
+}
+.order-list .my-order-item {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: white;
+    box-sizing: border-box;
+}
+.order-list .my-order-item .order-title {
+    width: 100%; 
+    height: 35px;
+    display: flex;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+.order-list .my-order-item .order-title .order-title-icon img {
+    width: 15px;
+    height: 18px;
+}
+.order-list .my-order-item .order-title .order-title-icon {
+    width: 50%; height: 35px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 10px;
+}
+.order-list .my-order-item .order-title div:first-child span {
+    font-size: 15px;
+    margin-left: 10px;
+    font-weight: 550;
+}
+.order-list .my-order-item .order-title div:nth-child(2) {
+    width: 50%; 
+    height: 35px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgb(192, 149, 96);
+    margin-right: 15px;
+    font-size: 13px;
+}
+.order-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-top: 15px;
+}
+.order-content > a:first-child > img {
+    margin: 10px 35px;
+    height: 100px;
+}
+.order-content > a:last-child {
+    height: 100px;
+}
+.order-content > a:last-child > div:first-child {
+    height: 40px;
+    font-size: 14px;
+    margin-right: 15px;
+    margin-left: -15px;
+    letter-spacing: 1px;
+    color: rgb(80, 80, 80);
+}
+.order-content > a:last-child > div:nth-child(2) {
+    height: 35px;
+    font-size: 12px;
+    margin-left: -15px;
+    margin-top: 5px;
+    color: rgb(170, 170, 170);
+}
+.order-content > a:last-child > div:nth-child(3) {
+    height: 30px;
+    font-size: 16px;
+    text-align: right;
+    padding-right: 10px;
+    box-sizing: border-box;
+    color: red;
+    font-weight: 600;
+}
+.order-content > a:last-child > div:nth-child(3) span:first-child {
+    font-size: 12px;
+    color: red;
+    margin-right: -5px;
+}
+.order-content > a:last-child > div:nth-child(3) span:last-child {
+    font-size: 12px;
+    font-weight: lighter;
+    color: rgb(170, 170, 170);
+}
+.my-order-item .order-price {
+    width: 100%;
+    height: 60px;
+    line-height: 40px;
+    text-align: right;
+    padding: 15px 15px;
+    box-sizing: border-box;
+}
+.my-order-item .order-price span:first-child {
+    font-size: 14px;
+}
+.my-order-item .order-price span:last-child {
+    font-size: 18px;
+}
+.my-order-item .evaluate-btn {
+    width: 100%;
+    height: 50px;
+    line-height: 40px;
+    text-align: right;
+    padding-right: 15px;
+    box-sizing: border-box;
+
+}
+.my-order-item .evaluate-btn button {
+    width: 90px;
+    height: 30px;
+    border: 1px solid rgb(192, 149, 96);
+    background: white;
+    color: rgb(192, 149, 96);
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}

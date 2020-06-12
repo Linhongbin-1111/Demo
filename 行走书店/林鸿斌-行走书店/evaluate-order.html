@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>评价订单</title>
+    <link rel="stylesheet" href="./CSS/global.css">
+    <link rel="stylesheet" href="./CSS/evaluate-order.css">
+</head>
+<body>
+    <div class="header">
+        评价订单
+        <a class="back"></a>
+    </div>
+    <ul>
+        <li class="order-item">
+            <div class="pick-up-adress">
+                <img src="./images/卡车.png" alt="">
+                <span>取货门店：新华书店（新街口店）</span>
+            </div>
+            <div class="ship-adress">
+                <img src="./images/定位2.png" alt="">
+                <span>取货门店：新华书店（新街口店）</span>
+            </div>
+            <div class="order-list">
+                <!-- order-list -->
+                <div class="my-order-item">
+                    <!-- content -->
+                    <div class="order-content">
+                        <div>
+                            <img src="./images/红楼梦.jpg" alt="">
+                        </div>
+                        <div>
+                            <div>
+                                一生自在季羡林的自在智慧(午静携侣寻野菜，黄昏抱猫...
+                            </div>
+                            <div>
+                                重量：0.32kg&nbsp;系列：一生自在系列
+                            </div>
+                            <div>
+                                <span>￥</span>
+                                42.80
+                                &nbsp;<span>x1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-price">
+                        <span>共一件商品，合计￥</span>
+                        <span>42.80</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="order-info">
+            <div class="order-info-title">
+                订单信息
+            </div>
+            <ul class="order-info-list">
+                <li>订单编号:<span>2020020713270034</span></li>
+                <li>创建时间:<span>2020-02-11&nbsp;11:54:01</span></li>
+                <li>订单状态:<span>已付款</span></li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        // 返回
+        let back = document.querySelector('.back');
+        // console.log(back);
+        back.onclick = function (e) {
+            e.preventDefault();
+            location.href='./my-order.html'
+        }
+    </script>
+</body>
+</html>

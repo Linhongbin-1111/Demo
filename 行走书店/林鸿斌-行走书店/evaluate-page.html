@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>评价</title>
+    <link rel="stylesheet" href="./CSS/evaluate-page.css">
+    <link rel="stylesheet" href="./CSS/global.css">
+</head>
+<body>
+    <!-- header头部 -->
+    <div class="header">
+        <a>商品</a>
+        <div>评价</div>
+        <a class="back"></a>
+    </div>
+    <!-- evaluate -->
+    <div class="evaluate">
+        <div class="active">全部评价</div>
+        <div>好评</div>
+        <div>中评</div>
+        <div>差评</div>
+    </div>
+    <!-- evaluate-detail -->
+    <div class="evaluate-detail">
+        <ul>
+            <li>
+                <!-- 用户信息 -->
+                <div class="user-evaluate">
+                    <div class="user-info">
+                        <img src="./images/头像.png" alt="">
+                        <div>
+                            <div>Cvita Doleschall</div>
+                            <div>2020-02-11 11:11</div>
+                        </div>
+                    </div>
+                    <div class="stars"></div>
+                </div>
+                <!-- 评价内容 -->
+                <div class="evaluate-message">
+                    这本书从封面设计制作的质量和内部用的纸张，大小间距用量整体看属于上等水准，
+                    值得购买，书质量特别好，还没开始看，带宝宝时间有点紧，多买书，以后为宝宝
+                    营造好的文学氛围。内容就不用多说了，肯定是有很多值得学习的东西。人丑要多
+                    读书，人穷也要多读书，嗯，没错的。希望自己后面能多挤出时间来读读这本书。
+                    加油！五星好评！
+                </div>
+            </li>
+            <li>
+                <!-- 用户信息 -->
+                <div class="user-evaluate">
+                    <div class="user-info">
+                        <img src="./images/头像.png" alt="">
+                        <div>
+                            <div>Stormie Hansford</div>
+                            <div>2020-02-11 11:50:50</div>
+                        </div>
+                    </div>
+                    <div class="stars"></div>
+                </div>
+                <!-- 评价内容 -->
+                <div class="evaluate-message">
+                    这本书从封面设计制作的质量和内部用的纸张，大小间距用量整体看属于上等水准，值得购买，五星好评！
+                </div>
+            </li>
+            <li>
+                <!-- 用户信息 -->
+                <div class="user-evaluate">
+                    <div class="user-info">
+                        <img src="./images/头像.png" alt="">
+                        <div>
+                            <div>Rim Chong-Suk</div>
+                            <div>2020-02-11 11:50:50</div>
+                        </div>
+                    </div>
+                    <div class="stars"></div>
+                </div>
+                <!-- 评价内容 -->
+                <div class="evaluate-message">
+                    这本书从封面设计制作的质量和内部用的纸张，大小间距用量整体看属于上等水准，值得购买，五星好评！
+                </div>
+            </li>
+            <li>
+                <!-- 用户信息 -->
+                <div class="user-evaluate">
+                    <div class="user-info">
+                        <img src="./images/头像.png" alt="">
+                        <div>
+                            <div>Naseema Al Morad</div>
+                            <div>2020-02-11 11:50:50</div>
+                        </div>
+                    </div>
+                    <div class="stars"></div>
+                </div>
+                <!-- 评价内容 -->
+                <div class="evaluate-message">
+                    这本书从封面设计制作的质量和内部用的纸张，大小间距用量整体看属于上等水准，值得购买，五星好评！
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // 跳转到商品详情页
+        let commodityDetail = document.querySelector('.header a:first-child');
+        commodityDetail.onclick = function (e) {
+            e.preventDefault();
+            location.href='./commodity-detail.html'
+        }
+
+        // 返回
+        let back = document.querySelector('.back');
+        // console.log(back);
+        back.onclick = function (e) {
+            e.preventDefault();
+            location.href='./commodity-detail.html'
+        }
+    </script>
+</body>
+</html>

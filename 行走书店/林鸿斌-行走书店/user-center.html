@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="./CSS/user-center.css">
+    <link rel="stylesheet" href="./CSS/global.css">
+</head>
+<body>
+    <div class="header">个人中心</div>
+    <div class="user-info">
+        <img src="./images/头像.png" alt="">
+        <span class="user-name">Cayla&nbsp;Brister</span>
+    </div>
+    <div class="edit-list">
+        <ul>
+            <li>
+                <a class="icon-info">
+                    <div class="icon">
+                        <img src="./images/订单.png" alt="">
+                    </div>
+                    <div>我的订单</div>
+                </a>
+                <a class="right-btn">
+                    <img src="./images/右.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a class="icon-info">
+                    <div class="icon">
+                        <img src="./images/修改密码.png" alt="">
+                    </div>
+                    <div>修改密码</div>
+                </a>
+                <a class="right-btn">
+                    <img src="./images/右.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a class="icon-info">
+                    <div class="icon">
+                        <img src="./images/邀请码.png" alt="">
+                    </div>
+                    <div>修改店铺邀请码</div>
+                </daiv>
+                <a class="right-btn">
+                    <img src="./images/右.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a class="icon-info">
+                    <div class="icon">
+                        <img src="./images/退出.png" alt="">
+                    </div>
+                    <div>退出登录</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <a class="footer-item active">
+            <div class="item-icon"></div>
+            <div class="item-title">首页</div>
+        </a>
+        <a class="footer-item active">
+            <div class="item-icon"></div>
+            <div class="item-title">分类</div>
+        </a>
+        <a class="footer-item active">
+            <div class="item-icon"></div>
+            <div class="item-title">购物车</div>
+        </a>
+        <a class="footer-item active">
+            <div class="item-icon"></div>
+            <div class="item-title">我的</div>
+        </a>
+        <div class="footer-solid"></div>
+    </div>
+
+    <script>
+        let myOrder = document.querySelector('.edit-list ul li:first-child');
+        // console.log(myOrder);
+        let editPassword = document.querySelector('.edit-list ul li:nth-child(2)');
+        // console.log(editPassword);
+        let editInviteCode = document.querySelector('.edit-list ul li:nth-child(3)')
+        // console.log(editInviteCode);
+        let exit = document.querySelector('.edit-list ul li:last-child');
+        // console.log(exit);
+        let index = document.querySelector('.footer a:first-child')
+        let classify = document.querySelector('.footer a:nth-child(2)')
+        let shopCar = document.querySelector('.footer a:nth-child(3)')
+        
+        myOrder.onclick = function(e) {
+            e.preventDefault();
+            location.href='./my-order.html'
+        }
+
+        editPassword.onclick = function(e) {
+            e.preventDefault();
+            location.href='./edit-password.html'
+        }
+
+        editInviteCode.onclick = function(e) {
+            e.preventDefault();
+            location.href='./edit-invite-code.html'
+        }
+
+        exit.onclick = function(e) {
+            e.preventDefault();
+            location.href='./login.html'
+        }
+
+        index.onclick = function(e) {
+            e.preventDefault();
+            location.href='./index.html'
+        }
+
+        classify.onclick = function(e) {
+            e.preventDefault();
+            location.href='./commodity-classify.html'
+        }
+
+        shopCar.onclick = function(e) {
+            e.preventDefault();
+            location.href='./shopping-trolley.html'
+        }
+
+    </script>
+</body>
+</html>

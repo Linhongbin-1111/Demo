@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的订单</title>
+    <link rel="stylesheet" href="./CSS/global.css">
+    <link rel="stylesheet" href="./CSS/my-order.css">
+</head>
+<body>
+    <div class="header">
+        我的订单
+        <a class="back"></a>
+    </div>
+    <!-- evaluate -->
+    <div class="evaluate">
+        <div class="active">全部订单</div>
+        <div>已付款</div>
+        <div>待取货</div>
+        <div>已完成</div>
+    </div>
+    <!-- order-list -->
+    <ul class="order-list">
+        <li class="my-order-item">
+            <!-- order title -->
+            <div class="order-title">
+                <div class="order-title-icon">
+                    <img src="./images/我的订单.png" alt="">
+                    <span>2020020713270034</span>
+                </div>
+                <div>已付款</div>
+            </div>
+            <!-- content -->
+            <div class="order-content">
+                <a>
+                    <img src="./images/红楼梦.jpg" alt="">
+                </a>
+                <a>
+                    <div>
+                        一生自在季羡林的自在智慧(午静携侣寻野菜，黄昏抱猫看夕阳...
+                    </div>
+                    <div>
+                        重量：0.32kg&nbsp;系列：一生自在系列
+                    </div>
+                    <div>
+                        <span>￥</span>
+                        42.80
+                        &nbsp;<span>x1</span>
+                    </div>
+                </a>
+            </div>
+            <div class="order-price">
+                <span>共一件商品，合计￥</span>
+                <span>42.80</span>
+            </div>
+            <div class="evaluate-btn hide">
+                <button>评价</button>
+            </div>
+        </li>
+        <li class="my-order-item">
+            <!-- order title -->
+            <div class="order-title">
+                <div class="order-title-icon">
+                    <img src="./images/我的订单.png" alt="">
+                    <span>2020020713270034</span>
+                </div>
+                <div>已完成</div>
+            </div>
+            <!-- content -->
+            <div class="order-content">
+                <a>
+                    <img src="./images/红楼梦.jpg" alt="">
+                </a>
+                <a>
+                    <div>
+                        一生自在季羡林的自在智慧(午静携侣寻野菜，黄昏抱猫看夕阳...
+                    </div>
+                    <div>
+                        重量：0.32kg&nbsp;系列：一生自在系列
+                    </div>
+                    <div>
+                        <span>￥</span>
+                        42.80
+                        &nbsp;<span>x1</span>
+                    </div>
+                </a>
+            </div>
+            <div class="order-price">
+                <span>共一件商品，合计￥</span>
+                <span>42.80</span>
+            </div>
+            <div class="evaluate-btn show">
+                <button>评价</button>
+            </div>
+        </li>
+        <li class="my-order-item">
+            <!-- order title -->
+            <div class="order-title">
+                <div class="order-title-icon">
+                    <img src="./images/我的订单.png" alt="">
+                    <span>2020020713270034</span>
+                </div>
+                <div>已付款</div>
+            </div>
+            <!-- content -->
+            <div class="order-content">
+                <a>
+                    <img src="./images/红楼梦.jpg" alt="">
+                </a>
+                <a>
+                    <div>
+                        一生自在季羡林的自在智慧(午静携侣寻野菜，黄昏抱猫看夕阳...
+                    </div>
+                    <div>
+                        重量：0.32kg&nbsp;系列：一生自在系列
+                    </div>
+                    <div>
+                        <span>￥</span>
+                        42.80
+                        &nbsp;<span>x1</span>
+                    </div>
+                </div>
+            </a>
+            <div class="order-price">
+                <span>共一件商品，合计￥</span>
+                <span>42.80</span>
+            </div>
+            <div class="evaluate-btn hide">
+                <button class="evaluate-btn">评价</button>
+            </div>
+        </li>
+    </ul>
+
+    <script>
+        // 返回
+        let back = document.querySelector('.back');
+        // console.log(back);
+        back.onclick = function (e) {
+            e.preventDefault();
+            location.href='./user-center.html'
+        }
+
+        // 多个订单跳转
+        let order = document.querySelectorAll('.order-list .my-order-item');
+        for (let i = 0; i < order.length; i++) {
+            order[i].onclick = function (e) {
+                e.preventDefault();
+                location.href='./evaluate-order.html'
+            }
+        }
+
+        // 评价订单跳转
+        let evaluateBtn = document.querySelector('.evaluate-btn');
+        evaluateBtn.onclick = function (e) {
+            e.preventDefault();
+            location.href='./evaluate-order.html'
+        }
+    </script>
+</body>
+</html>

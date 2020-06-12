@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/register.css">
+    <link rel="stylesheet" href="./CSS/global.css">
+    <title>注册</title>
+</head>
+<body>
+    <div class="title">
+        注册
+        <a>
+            <img class="back" src="./images/back2.jpg" alt="">
+        </a>
+        <button class="more">···</button>
+    </div>
+    <div class="head">
+        <img class="logo" src="./images/logo.png" alt="">
+    </div>
+    <div class="sex">
+        <div class="man">
+            <img src="./images/男.png" alt="">
+            <span>男</span>
+        </div>
+        <div class="woman">
+            <img src="./images/女.png" alt="">
+            <span>女</span>
+        </div>
+    </div>
+    <div class="bodys">
+        <form action="" class="forms">
+            <div class="list">
+                <div class="img-box">
+                    <img src="./images/用户名.png" alt="">
+                </div>
+                <input type="text" placeholder="请输入用户名" class="username"
+                 onfocus="this.placeholder=''" onblur="this.placeholder='请输入用户名'">
+            </div>
+            <div class="list">
+                <div class="img-box">
+                    <img src="./images/密码.png" alt="">
+                </div>
+                <input type="text" placeholder="请输入密码" class="password"
+                onfocus="this.placeholder=''" onblur="this.placeholder='请输入密码'">
+            </div>
+            <div class="list">
+                <div class="img-box">
+                    <img src="./images/确认密码.png" alt="">
+                </div>
+                <input type="text" placeholder="请确认密码" class="sure-password"
+                onfocus="this.placeholder=''" onblur="this.placeholder='请确认密码'">
+            </div>
+            <div class="list">
+                <div class="img-box">
+                    <img src="./images/手机.png" alt="">
+                </div>
+                <input type="text" placeholder="请输入手机号" class="phone-number"
+                onfocus="this.placeholder=''" onblur="this.placeholder='请输入手机号'">
+            </div>
+            <div class="list">
+                <div class="img-box">
+                    <img src="./images/姓名.png" alt="">
+                </div>
+                <input type="text" placeholder="请输入姓名" class="name"
+                onfocus="this.placeholder=''" onblur="this.placeholder='请输入姓名'">
+            </div>
+            <div class="list">
+                <div class="img-box">
+                    <img src="./images/身份证.png" alt="">
+                </div>
+                <input type="text" placeholder="请输入身份证" class="id-card"
+                onfocus="this.placeholder=''" onblur="this.placeholder='请输入身份证'">
+            </div>
+        </form>
+        <div class="foot">
+            <a href="login.html" class="register_button">注册</a>
+        </div> 
+    </div>
+
+    <script>
+        // 注册按钮
+        let register = document.querySelector('.foot')
+        register.onclick = function (e) {
+            e.preventDefault();
+            let username = document.querySelector('.bodys .forms div:first-child input').value;
+            let password = document.querySelector('.bodys .forms div:nth-child(2) input').value;
+            let surePassword = document.querySelector('.bodys .forms div:nth-child(3) input').value;
+            let phoneNumber = document.querySelector('.bodys .forms div:nth-child(4) input').value;
+            let name = document.querySelector('.bodys .forms div:nth-child(5) input').value;
+            let idCard = document.querySelector('.bodys .forms div:last-child input').value;
+            // console.log(username)
+            location.href = './login.html'
+        }
+
+        // 返回
+        let back = document.querySelector('.back');
+        // console.log(back);
+        back.onclick = function (e) {
+            e.preventDefault();
+            location.href='./login.html'
+        }
+    </script>
+</body>
+</html>

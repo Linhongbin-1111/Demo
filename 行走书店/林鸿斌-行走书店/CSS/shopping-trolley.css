@@ -1,0 +1,329 @@
+body {
+    background: rgb(246, 246, 246);
+    box-sizing: border-box;
+}
+.header {
+    width: 100%; height: 60px;
+    font-size: 25px;
+    font-family: '黑体', Arial, Helvetica, sans-serif;
+    color: rgb(192, 149, 96);
+    text-align: center;
+    line-height: 60px;
+    letter-spacing: 1px;
+    position: relative;
+    background: white;
+}
+.header span {
+    position: absolute;
+    font-size: 18px;
+    color: rgb(192, 149, 96);
+    right: 20px;
+}
+.book-list {
+    width: 96%;
+    margin: 10px auto;
+}
+.book-list .book-list-item {
+    width: 100%; height: 160px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: white;
+    box-sizing: border-box;
+    padding: 10px 0px;
+    display: flex;
+}
+.book-list .book-list-item .select-btn-box {
+    width: 45px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book-list .book-list-item .select-btn-box > div {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    border: 1.5px solid rgb(216, 215, 215);
+    border-radius: 50%;
+}
+.book-list .book-list-item .select-btn-box > div input {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-75%, -65%);
+    z-index: 1;
+    opacity: 0;
+    /* border-radius: 50%; */
+    /* background-color: #ffffff;
+    border: none; */
+}
+/* .book-list .book-list-item .select-btn-box > div input[type=checkbox]::after {
+    background-color: #ffffff;
+    border: none;
+} */
+
+.book-list .book-list-item .select-btn-box > div .action {
+    display: none;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: rgb(223, 173, 112);
+    top: 50%;
+    left: 50%;
+    transform: translate(-52%, -50%);
+    z-index: 0;
+}
+/* .book-list .book-list-item .select-btn-box > div .action:hover {
+    display: block;
+} */
+
+.book-count-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+}
+.book-count-info > div:first-child > img {
+    margin: 10px 10px 10px 0px;
+    height: 100px;
+    /* align-self: center; */
+}
+.book-count-info > div:nth-child(2) {
+    width: 235px;
+    height: 100px;
+}
+.book-count-info > div:nth-child(2) > div:first-child {
+    height: 40px;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-left: 5px;
+    letter-spacing: 1px;
+    color: rgb(80, 80, 80);
+}
+.book-count-info > div:nth-child(2) > div:nth-child(2) {
+    height: 30px;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: 5px;
+    color: rgb(170, 170, 170);
+}
+.book-count-info > div:nth-child(2) > div:nth-child(3) {
+    width: 240px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.book-count-info > div:nth-child(2) > div:nth-child(3) > div {
+    width: 220px;
+    height: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.book-count-info > div:nth-child(2) > div:nth-child(3) > div > span:first-child {
+    font-size: 12px;
+    color: red;
+    margin-right: 3px;
+}
+.book-count-info > div:nth-child(2) > div:nth-child(3) > div > span:last-child {
+    font-size: 17px;
+    color: red;
+    font-weight: 600;
+}
+.book-count-info > div:nth-child(2) .change-count-box {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+}
+.book-count-info > div:nth-child(2) .change-count-box > div:first-child {
+    border: 1px solid #ddd;
+    width: 25px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #ddd;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.book-count-info > div:nth-child(2) .change-count-box > div:nth-child(2) {
+    border: 1px solid #ddd;
+    width: 35px;
+    height: 20px;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    line-height: 20px;
+}
+.book-count-info > div:nth-child(2) .change-count-box > div:nth-child(3) {
+    border: 1px solid #ddd;
+    width: 25px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #ddd;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.close-count {
+    position: fixed;
+    bottom: 60px;
+    width: 100%;
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.close-count > div:first-child {
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+.close-count > div:nth-child(2) {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 60px;
+}
+.close-count > div:first-child > div {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    border: 1.5px solid rgb(216, 215, 215);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.close-count > div:first-child > div input {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-75%, -65%);
+    z-index: 1;
+    opacity: 0;
+}
+
+.close-count > div:first-child > div .action {
+    display: none;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: rgb(223, 173, 112);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+.close-count > div:first-child > span {
+    font-family: '黑体' Arial, Helvetica, sans-serif;
+    color: rgb(170, 170, 170);
+}
+.close-count > div:last-child span:first-child {
+    color: rgb(106, 106, 106);
+    font-size: 14px;
+}
+.close-count > div:last-child span:nth-child(2) {
+    font-size: 18px;
+    color: red;
+    font-family: '黑体' Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin-right: 20px;
+}
+.close-count > div:last-child > button {
+    width: 110px;
+    font-size: 16px;
+    height: 40px;
+    color: white;
+    background: rgb(192, 149, 96);
+    border-radius: 10px;
+    border: 1px solid rgb(192, 149, 96);
+}
+.footer-solid {
+    width: 100%;
+    margin: 0px;
+    border: 1px solid rgb(150, 150, 150);
+    transform: scaleY(0.2);
+    position: fixed;
+}
+.footer {
+    width: 100%; height: 60px;
+    bottom: 0px;
+    display: flex;
+    position: fixed;
+    background: white;
+}
+.footer .footer-item {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;  /* 改变主轴为y轴 */
+    align-items: center;     /* 居中 */
+    justify-content: center;
+}
+.footer .footer-item .item-icon {
+    width: 25px; height: 25px;
+    background-size: 100% 100%;
+}
+.footer .footer-item:first-child .item-icon {
+    background: url(../images/首页2.png) no-repeat 0 0;
+    background-size: 100% 100%; 
+}
+/* .footer .active:first-child .item-icon{
+    background: url(../images/首页.png) no-repeat 0 0;
+    background-size: 100% 100%; 
+} */
+/* .footer .active:first-child .item-title{
+    position: relative;
+    top: 3px;
+    font-size: 12px;
+    color: rgb(192, 149, 96);
+} */
+.footer .footer-item:nth-child(2) .item-icon {
+    background: url(../images/分类2.png) no-repeat 0 0;
+    background-size: 100% 100%; 
+}
+/* .footer .active:nth-child(2) .item-icon{
+    background: url(../images/分类.png) no-repeat 0 0;
+    background-size: 100% 100%; 
+} */
+.footer .footer-item:nth-child(3) .item-icon {
+    background: url(../images/购物车2.png) no-repeat 0 0;
+    background-size: 100% 100%; 
+}
+.footer .active:nth-child(3) .item-icon{
+    background: url(../images/购物车.png) no-repeat 0 0;
+    background-size: 100% 100%; 
+}
+.footer .active:nth-child(3) .item-title{
+    position: relative;
+    top: 3px;
+    font-size: 12px;
+    color: rgb(192, 149, 96);
+}
+.footer .footer-item:nth-child(4) .item-icon {
+    background: url(../images/我的2.png) no-repeat 0 0;
+    background-size: 100% 100%; 
+}
+/* .footer .active:nth-child(4) .item-icon{
+    background: url(../images/我的.png) no-repeat 0 0;
+    background-size: 100% 100%; 
+} */
+.item-title {
+    position: relative;
+    top: 3px;
+    font-size: 12px;
+    color: rgb(106, 106, 106);
+}

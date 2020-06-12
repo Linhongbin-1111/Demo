@@ -1,0 +1,91 @@
+.head
+    {
+        width: 400px; height: 300px; text-align: center;
+    }
+    .logo
+    {
+        width: 205px; height: 74px; margin-top: 125px;
+    }
+    .body
+    {
+        width: 400px; height: 380px; text-align: center;
+        margin-top: 30px;
+    }
+    .userimg
+    {
+        width: 17px; height: 17px;
+        margin-left: 20px;
+        margin-bottom: 3px;
+    }
+    .username
+    {
+        width: 240px; height: 30px;
+        color: rgb(217, 217, 217);
+        border: 0px; 
+        font-size: 18px; 
+        font-family: '黑体', 'Times New Roman', Times, serif;
+        margin-left: 15px;
+        margin-bottom: 3px;
+    }
+    .password
+    {
+        width: 240px; height: 30px;
+        color: rgb(217, 217, 217);
+        border: 0px; 
+        font-size: 18px; 
+        font-family: '黑体', 'Times New Roman', Times, serif;
+        margin-left: 15px;
+        margin-bottom: 3px;
+    }
+    input {
+        outline: none;
+        color: rgb(217, 217, 217);
+    }
+    ::-webkit-input-placeholder {
+        color: rgb(173 , 173, 173);
+    }
+    .bottomline
+    {
+        margin-top: -20px;
+        color: rgb(217, 217, 217);
+    }
+    .space1
+    {
+        width: 400px; height: 35px;
+    }
+    .space2
+    {
+        width: 400px; height: 65px;
+    }
+    .land_button
+    {
+        width: 275px; 
+        height: 50px;
+        line-height: 50px;
+        background-color: rgb(192,149,96,0.9);
+        color: white; 
+        padding: 15px 115px;
+        font-size: 23px;
+        font-family: '黑体', Arial, Helvetica, sans-serif;
+        border-radius: 15px; 
+        border: none;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+    .foot
+    {
+        width: 400px; height: 200px;
+        margin-top: 15px;
+    }
+    .forget_pw
+    {
+        text-decoration: none;
+        color: rgb(152 , 152, 152);
+        float: left; margin-left: 65px;
+    }
+    .register
+    {
+        text-decoration: none;
+        color: rgb(152 , 152, 152);
+        float: right; margin-right: 65px;
+    }

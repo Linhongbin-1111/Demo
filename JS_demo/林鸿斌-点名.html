@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title {
+      width: 100%;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      background: #aaa;
+      color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .left-box {
+      position: relative;
+      width: 100px;
+      height: 200px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      overflow: auto;
+      padding-top: 30px;
+    }
+
+    .right-box {
+      position: relative;
+      width: 100px;
+      height: 200px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      overflow: auto;
+      padding-top: 30px;
+    }
+
+    .current-student {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align: center;">幸运儿：<span class="current-student"></span></div>
+  <div class="container">
+    <div class="left-box">
+      <div class="title">已点名</div>
+    </div>
+    <button class="btn">开始点名</button>
+    <div class="right-box">
+      <div class="title">未点名</div>
+    </div>
+  </div>
+  <script>
+    var students = [
+      '陈梓钊',
+      '黄嘉文',
+      '李鸿彬',
+      '李敏洲',
+      '黎晓思',
+      '陈明理',
+      '陈银概',
+      '林国楷',
+      '郑浩枢',
+      '廖鹏',
+      '林广锋',
+      '宁康超',
+      '叶瑛腾',
+      '白建辉',
+      '佘晓杰',
+      '林鸿斌',
+      '李建桦',
+      '李淑兰',
+      '任家锐',
+      '王榆',
+      '郭芸锋',
+      '陈俊焕',
+      '傅振江',
+      '王旭钦',
+      '黎非凡',
+      '彭印',
+      '张桂安',
+      '洪浩武',
+      '陈昭言',
+      '刘辉',
+      '欧天铭',
+      '何其声',
+      '黄晓聪',
+      '雷金烽',
+      '秦镇锐',
+      '陈俊杰',
+      '易建智',
+      '杜杰伟',
+    ]
+
+    var leftBox = document.getElementsByClassName('left-box')[0];
+    var rightBox = document.getElementsByClassName('right-box')[0];
+    var btn = document.getElementsByClassName('btn')[0];
+    var studentTotal = students.length;
+
+    for (var i = 0; i < students.length; i++) {
+        var div = document.createElement('div');
+        div.innerHTML = students[i];
+        div.className = 'student';
+        rightBox.appendChild(div);  // 通过for循环遍历，将students数组里的学生添加到右边div盒子里
+    }
+
+    btn.onclick = function () {
+      var div = document.createElement('div');
+      var studentList = document.querySelectorAll('.right-box div.student');
+      var index = Math.random() * studentTotal; // 在学生总数内取随机数
+
+      index = Math.floor(index);  // 取整，使随机数不出现小数
+      div.innerHTML = students[index];  // 利用取得的随机数通过数组得到姓名
+      rightBox.removeChild(studentList[index]); //将随机取出的数在列表中删除
+      leftBox.appendChild(div);  // 将随机取到的名字放入左边盒子中
+      studentTotal -= 1; // 每取出一个，将学生总数-1
+      document.getElementsByClassName('current-student')[0].innerHTML = students[index]; // 显示幸运儿
+      students.splice(index, 1);  // 将取到的名字删除，保证点名不重复，以及每个人都可以点到
+    }
+  </script>
+</body>
+</html>
